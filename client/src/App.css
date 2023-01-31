@@ -1,0 +1,52 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info button {
+    width: 320px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.show-hospitals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hospital-list {
+    display: flex;
+    padding: 10px;
+    width: 700px;
+    height: 180px;
+    border: 1px solid black;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.hospital-list h3 {
+    margin: 20px;
+}
