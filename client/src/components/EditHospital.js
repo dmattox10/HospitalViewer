@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 
 import { HospitalContext } from '../contexts/HospitalContext'
 
 const EditHospital = (props) => {
 
-    const { value, toggle }  = props // props.value props.toggle
+    const { value, toggle, modal }  = props // props.value props.toggle
     const { name, location, type, npi } = value // props.value.name, props.value.location
 
     const { editHospital } = useContext(HospitalContext)

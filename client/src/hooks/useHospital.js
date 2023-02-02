@@ -1,4 +1,5 @@
-
+import axios from 'axios';
+import { useState } from 'react'
 
 export const useHospital = () => {
     
@@ -11,7 +12,7 @@ export const useHospital = () => {
     const [newNpi, setNewNpi] = useState(0);
 
     const addHospital = () => {
-        Axios.post('http://localhost:4000/create', {
+        axios.post('http://localhost:4000/create', {
             name: name,
             location: location,
             type: type,
@@ -30,13 +31,13 @@ export const useHospital = () => {
     };
 
     const getHospitals = () => {
-        Axios.get('http://localhost:4000/hospitals').then((response) => {
+        axios.get('http://localhost:4000/hospitals').then((response) => {
             setHospitalList(response.data);
         });
     };
 
-    const updateHospitalNpi = (id) => {
-        Axios.put(`http://localhost:4000/edit/${id}`, { npi: newNpi, id: id }).then(
+    const editHospital = (id) => {
+        axios.put(`http://localhost:4000/edit/${id}`, { npi: newNpi, id: id }).then(
             (response) => {
                 setHospitalList(
                     hospitalList.map((value) => {
@@ -56,7 +57,7 @@ export const useHospital = () => {
     };
 
     const deleteHospital = (id) => {
-        Axios.delete(`http://localhost:4000/delete/${id}`).then((response) => {
+        axios.delete(`http://localhost:4000/delete/${id}`).then((response) => {
             setHospitalList(
                 hospitalList.filter((value) => {
                     return value.id !== id;
@@ -65,6 +66,6 @@ export const useHospital = () => {
         });
     };
 
-    return [ name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals, , editHospital ]
+    return [ name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals, editHospital ]
 
 }

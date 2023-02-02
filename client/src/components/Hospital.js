@@ -1,15 +1,13 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 import { HospitalContext } from '../contexts/HospitalContext';
-
-import  EditHospital from './EditHospital';
 
 // The next place to expand is to add form validation and feedback with Formik, Yup
 
 export const Hospital = (props) => {
 
-    const { value, key } = props
-    const { setNewNpi, updateHospitalNpi, deleteHospital } = useContext(HospitalContext)
+    const { value } = props
+    const { setNewNpi, EditHospital, deleteHospital } = useContext(HospitalContext)
 
     const [modal, setModal] = useState(false)
 
@@ -33,7 +31,7 @@ export const Hospital = (props) => {
                 ></input>
                 {/* <button
                     onClick={() => {
-                        updateHospitalNpi(value.id);
+                        editHospital(value.id);
                     }}
                 >
                     Update
@@ -47,7 +45,7 @@ export const Hospital = (props) => {
                 >
                     Delete
                 </button>
-                <EditHospital value={ value } toggle={ toggle }/>
+                <EditHospital value={ value } toggle={ toggle } modal={ modal }/>
             </div>
         </div>
     );

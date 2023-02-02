@@ -1,7 +1,5 @@
 import './App.css';
-import { useState } from 'react';
-import Axios from 'axios';
-import Hospital from './components/Hospital';
+import HospitalForm from './components/HospitalForm';
 import { HospitalContext } from './contexts/HospitalContext';
 import { useHospital } from './hooks/useHospital'
 
