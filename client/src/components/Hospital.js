@@ -47,7 +47,7 @@ export const Hospital = (props) => {
                 >
                     Delete
                 </button>
-                <Modal value={ value } toggle={ toggle }/>
+                <EditHospital value={ value } toggle={ toggle }/>
             </div>
         </div>
     );
