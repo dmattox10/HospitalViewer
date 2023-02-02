@@ -4,8 +4,8 @@ import { HospitalContext } from '../contexts/HospitalContext'
 
 const EditHospital = (props) => {
 
-    const { value, toggle }  = props
-    const { name, location, type, npi } = value
+    const { value, toggle }  = props // props.value props.toggle
+    const { name, location, type, npi } = value // props.value.name, props.value.location
 
     const { editHospital } = useContext(HospitalContext)
 
@@ -21,6 +21,7 @@ const EditHospital = (props) => {
         }
 
         editHospital(update)
+        toggle()
     }
 
     return (
@@ -62,7 +63,7 @@ const EditHospital = (props) => {
                 </div>
             </div>                    
             <div className='modal-footer'>
-                <button color="secondary" onClick={toggle}>Cancel</button>
+                <button color="secondary" onClick={() => toggle}>Cancel</button>
             </div>
         </div>
     )

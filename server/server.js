@@ -42,7 +42,7 @@ app.get('/hospitals', (req, res) => {
     });
 });
 
-app.put('/edit', (req, res) => {
+app.put('/edit/:id', (req, res) => {
     const id = req.body.id;
     const npi = req.body.npi;
     db.query(
@@ -58,7 +58,7 @@ app.put('/edit', (req, res) => {
     );
 });
 
-app.delete('/delete:id', (req, res) => {
+app.delete('/delete/:id', (req, res) => {
     const id = req.params.id;
     db.query('DELETE FROM hospitals WHERE id = ?', id, (err, result) => {
         if (err) {
