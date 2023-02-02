@@ -65,6 +65,6 @@ const useHospital = () => {
         });
     };
 
-    return [ name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals ]
+    return [ name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals, , editHospital ]
 
 }   

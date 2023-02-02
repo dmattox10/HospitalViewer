@@ -6,11 +6,11 @@ import { HospitalContext } from './contexts/HospitalContext';
 
 function App() {
 
-    const [name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals ] = useHospital()
+    const [name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals, editHospital ] = useHospital()
 
     return (
         <div className='App'>
-            <HospitalContext.Provider value={{ name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals  }}>
+            <HospitalContext.Provider value={{ name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals, editHospital  }}>
             <HospitalForm />
             </HospitalContext.Provider>
         </div>

@@ -34,7 +34,7 @@ export const Hospital = (props) => {
                 >
                     Update
                 </button> */}
-                <button onClick={() => {toggleModal()}}>Edit</button>
+                <button onClick={() => {toggle()}}>Edit</button>
                 <br />
                 <button
                     onClick={() => {
@@ -43,7 +43,7 @@ export const Hospital = (props) => {
                 >
                     Delete
                 </button>
-                <Modal value={value} />
+                <Modal value={ value } toggle={ toggle }/>
             </div>
         </div>
     );
