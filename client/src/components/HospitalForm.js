@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 
 import { HospitalContext } from '../contexts/HospitalContext';
+
+import  Hospital from './Hospital';
 const HospitalForm = (props) => {
 
     const {setName, setLoc, setType, setNpi, hospitalList, addHospital, getHospitals}  = useContext(HospitalContext)
@@ -49,3 +51,5 @@ const HospitalForm = (props) => {
             </div>
     )
 }
+
+export default HospitalForm
