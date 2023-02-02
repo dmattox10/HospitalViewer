@@ -36,7 +36,7 @@ const useHospital = () => {
     };
 
     const updateHospitalNpi = (id) => {
-        Axios.put('http://localhost:4000/edit', { npi: newNpi, id: id }).then(
+        Axios.put(`http://localhost:4000/edit/${id}`, { npi: newNpi, id: id }).then(
             (response) => {
                 setHospitalList(
                     hospitalList.map((value) => {
