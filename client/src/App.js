@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Axios from 'axios';
 import Hospital from './components/Hospital';
 import { HospitalContext } from './contexts/HospitalContext';
+import { useHospital } from './hooks/useHospital'
 
 function App() {
 

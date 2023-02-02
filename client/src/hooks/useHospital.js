@@ -1,6 +1,6 @@
 
 
-const useHospital = () => {
+export const useHospital = () => {
     
     const [name, setName] = useState('');
     const [location, setLoc] = useState('');
@@ -67,4 +67,4 @@ const useHospital = () => {
 
     return [ name, setName, location, setLoc, type, setType, npi, setNpi, hospitalList, setHospitalList, newNpi, setNewNpi, addHospital, getHospitals, , editHospital ]
 
-}   
+}
